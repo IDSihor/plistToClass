@@ -12,4 +12,4 @@
 ###### anywere you need (app delegate for example), just create new instance "Settings *globalSettings = [Settings new];"
 ###### and now you can use your settings, any parameters as a class, autofilling inside xcode etc...
 ### like:
-#@ titleLabel.text =  globalSettings.fonts.mainScreenSettings.title;
+### titleLabel.text =  globalSettings.fonts.mainScreenSettings.title;
