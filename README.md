@@ -6,8 +6,10 @@
 
 2. how to get script
 ###### in `bin` folder there is ready script to run !!!
+
 3. how to customize
 ###### just open project and go
+
 4. how to setup inside xcode for the first usage
 ###### simply copy bin file to project folder (plistToClass)
 ###### create new class in project, like `GlobalSettings`.h(.m)
@@ -16,8 +18,10 @@
 ###### that's all )
 ###### now You have a class for .plist file ), and can create an instance one ), and use it inside xcode )
 ###### class name will be `(plist file name, without extension)_class` !!!
+
 5. how to use
 ###### after updating .plist file, just build the project, after that, you can use all properties with autofilling in xcode
+
 6. example
 ###### we have `Settings.plist`
 ###### we created files `GlobalSettings.h` and `.m`
