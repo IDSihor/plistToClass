@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>newDate</key>
+	<date>2016-06-16T11:56:58Z</date>
+	<key>String</key>
+	<string>312desqw</string>
+	<key>Date</key>
+	<data></data>
+	<key>Dict1</key>
+	<dict/>
+	<key>array1</key>
+	<array>
+		<string>1</string>
+		<string>2</string>
+		<string>3</string>
+		<string>4</string>
+		<array>
+			<string></string>
+			<string></string>
+		</array>
+	</array>
+	<key>testBool</key>
+	<false/>
+	<key>GlobalParameters</key>
+	<dict>
+		<key>Test1</key>
+		<array>
+			<string>fgdsg</string>
+			<string>gdf</string>
+			<string>gdfg</string>
+		</array>
+		<key>Item2</key>
+		<string></string>
+		<key>ParametersForPhotos</key>
+		<dict>
+			<key>color</key>
+			<string>ds</string>
+			<key>text</key>
+			<string>fdfd</string>
+		</dict>
+	</dict>
+</dict>
+</plist>
