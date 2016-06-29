@@ -3,7 +3,7 @@
 
 1. Purpose
 ###### We always use `.plist` files in our projects, but anyway, we should use hardcoded keys to work with corresponding values in project. 
-###### like : NSString *color = ((NSDictionary*)colorDictionary)[@"colorForMainScreen"];
+###### like : `NSString *color = ((NSDictionary*)colorDictionary)[@"colorForMainScreen"];`
 ###### We have to ask dictionary :`please give me the value by key`
 ###### so key should be constant and saved anywere in project. 
 ###### No xcode autofilling, no value types!!! 
