@@ -28,6 +28,7 @@
 ###### in "build phases/run script" we have `./plistToClass Settings GlobalSettings`
 ###### that's all
 ###### `CMD + B`
+###### now we can get our .plist file like `Settings_class *settings = [Settings_class new];`
 ###### so let's go coding )
 
 
