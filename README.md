@@ -1,5 +1,6 @@
 # plistToClass
-simply makes class from plist(app settings for example) in build time, in xcode
+# simply makes class from plist(app settings for example) in build time, in xcode
+
 
 build source as command line app
 add this util to xcode project dir
