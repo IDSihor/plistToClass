@@ -1,9 +1,10 @@
 # plistToClass
-# simply makes class from plist(app settings for example) in build time, in xcode
+## Simply makes class from `.plist` file (app settings for example) in build time, in xXode IDE!
 
 1. Purpose
 ###### We always use `.plist` files in our projects, but anyway, we should use hardcoded keys to work with corresponding values in project. 
-###### `.plist` to dictionary, and then we have to ask dictionary :`please give me the value by key`
+###### like : NSString *color = ((NSDictionary*)colorDictionary)[@"colorForMainScreen"];
+###### We have to ask dictionary :`please give me the value by key`
 ###### so key should be constant and saved anywere in project. 
 ###### No xcode autofilling, no value types!!! 
 ###### This work is usefull for application settings for example saved in `.plist` file.
