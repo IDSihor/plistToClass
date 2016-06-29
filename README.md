@@ -13,21 +13,21 @@
 ###### in `bin` folder there is ready script to run !!!
 
 3. How to setup inside xCode for the first usage
-###### simply copy bin file to project folder `plistToClass`
-###### create new class in project, like `GlobalSettings`.h(.m)
-###### in "build phases/run script" add :
+###### Simply copy bin file to project folder `plistToClass` bin file.
+###### Create new class in project, like `GlobalSettings`.h(.m).
+###### In projects "build phases/run script" add :
 ###### `./plistToClass <(plist file name, without extension)> <GlobalSettings>`
 ###### Build the project
 ###### That's all )
-###### Now You have a class for `.plist` file ), and can create an instance one ), and use it inside xcode )
-###### class name will be **`(plist file name, without extension)_class`** !!!
+###### Now You have a class for `.plist` file ), and can create an instance one ), and use it inside xCode ).
+###### Class name will be **`(plist file name, without extension)_class`** !!!
 
 4. How to use
-###### after updating `.plist` file, just build the project, 
-###### after that, you can use all properties with autofilling in xCode
+###### After updating `.plist` file, just build the project, 
+###### after that, you can use **all properties with autofilling in xCode**
 
 5. Example
-###### we have `Settings.plist`
+###### We have `Settings.plist`
 ###### we created files `GlobalSettings.h` and `.m`
 ###### in **"build phases/run script"** we have `./plistToClass Settings GlobalSettings`
 ###### that's all
