@@ -8,7 +8,7 @@
 
 ###### just if you have Settings.plist file in project, simply create empty class,
 ###### for example GlobalSettings.h(m) `important !!!, it's not a class name!!! new class will be Settings_class`
-### dont forget to add script to "build phases/run script" like 
+### don't forget to add script to "build phases/run script" like 
 ### `./(util name) Settings(plist file name) GlobalSettings(file name)`
 ###### anywere you need (app delegate for example), just create new instance `"Settings_class *globalSettings = [Settings_class new];"`
 ###### and now you can use your settings, any parameters as a class, autofilling inside xcode etc...
