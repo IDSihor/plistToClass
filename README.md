@@ -1,8 +1,9 @@
 # plistToClass
 # simply makes class from plist(app settings for example) in build time, in xcode
 
+### in `bin` folder there is ready script to run !!!
 
-###### build source as command line app
+###### build source as command line application
 ###### add this util to xcode project dir
 
 ###### just if you have settings.plist file in project, simply create empty class,
