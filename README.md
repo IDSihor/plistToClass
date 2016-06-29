@@ -33,6 +33,6 @@
 ###### that's all
 ###### `CMD + B`, building the project.
 ###### Now we can get our `.plist` file like **`Settings_class *settings = [Settings_class new];`**
-###### **so let's go coding )**
+###### **so let's go coding )** :+1:
 
 
