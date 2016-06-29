@@ -6,13 +6,13 @@
 ###### like : `NSString *color = ((NSDictionary*)colorDictionary)[@"colorForMainScreen"];`
 ###### We have to ask dictionary :`please give me the value by key`
 ###### so key should be constant and saved anywere in project. 
-###### No xcode autofilling, no value types!!! 
+###### No xCode autofilling, no value types!!! 
 ###### This work is usefull for application settings for example saved in `.plist` file.
 
 2. How to get script
 ###### in `bin` folder there is ready script to run !!!
 
-3. How to setup inside xcode for the first usage
+3. How to setup inside xCode for the first usage
 ###### simply copy bin file to project folder `plistToClass`
 ###### create new class in project, like `GlobalSettings`.h(.m)
 ###### in "build phases/run script" add :
