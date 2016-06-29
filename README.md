@@ -1,7 +1,7 @@
 # plistToClass
 # simply makes class from plist(app settings for example) in build time, in xcode
 
-- purpose
+1. purpose
 ###### everywere we always use .plist files, but anyway, we should use hardcoded keys to work with corresponding values in project. .plist to dictionary, and then `please give me the value by key`, so key should be constant saved anywere in project. no xcode autofilling, no value types, nothing!!! this work is very usefull for application settings for example saved in .plist file.
 
 - how to get script
