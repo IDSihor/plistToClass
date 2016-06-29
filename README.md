@@ -16,3 +16,10 @@
 ###### now you can access in code all your properties of plist file 
 ### like:
 ### `titleLabel.text =  globalSettings.fonts.mainScreenSettings.title;`
+
+#
+#
+#
+##TODO ----------
+### global refactoring !!! 
+### it was very quick work
