@@ -1,25 +1,32 @@
 # plistToClass
 # simply makes class from plist(app settings for example) in build time, in xcode
 
-### in `bin` folder there is ready script to run !!!
+- purpose
+###### everywere we always use .plist files, but anyway, we should use hardcoded keys to work with corresponding values in project. .plist to dictionary, and then `please give me the value by key`, so key should be constant saved anywere in project. no xcode autofilling, no value types, nothing!!! this work is very usefull for application settings for example saved in .plist file.
 
-###### build source as command line application
-###### add this util to xcode project dir
+- how to get script
+###### in `bin` folder there is ready script to run !!!
+- how to customize
+###### just open project and go
+- how to setup inside xcode for the first usage
+###### simply copy bin file to project folder (plistToClass)
+###### create new class in project, like `GlobalSettings`.h(.m)
+###### in "build phases/run script" add `./plistToClass <(plist file name, without extension)> <GlobalSettings>`
+###### just build the project
+###### that's all )
+###### now You have a class for .plist file ), and can create an instance one ), and use it inside xcode )
+###### class name will be `(plist file name, without extension)_class` !!!
+- how to use
+###### after updating .plist file, just build the project, after that, you can use all properties with autofilling in xcode
+- example
+###### we have `Settings.plist`
+###### we created files `GlobalSettings.h` and `.m`
+###### in "build phases/run script" we have `./plistToClass Settings GlobalSettings`
+###### that's all
+###### `CMD + B`
+###### so let's go coding )
 
-###### just if you have Settings.plist file in project, simply create empty class,
-###### for example GlobalSettings.h(m) `important !!!, it's not a class name!!! new class will be Settings_class`
-### don't forget to add script to "build phases/run script" like 
-### `./(util name) Settings(plist file name) GlobalSettings(file name)`
-###### anywere you need (app delegate for example), just create new instance `"Settings_class *globalSettings = [Settings_class new];"`
-###### and now you can use your settings, any parameters as a class, autofilling inside xcode etc...
-###### after building your project ))), `CMD + B`, and magic is here )
-###### now you can access in code all your properties of plist file 
-### like:
-### `titleLabel.text =  globalSettings.fonts.mainScreenSettings.title;`
 
-#
-#
-#
-###TODO ----------
+- TO DO 
 ###### global refactoring !!! 
 ###### it was very quick work
