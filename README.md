@@ -11,5 +11,7 @@
 ### `./(util name) settings(plist file name) Settings(class name)`
 ###### anywere you need (app delegate for example), just create new instance `"Settings *globalSettings = [Settings new];"`
 ###### and now you can use your settings, any parameters as a class, autofilling inside xcode etc...
+###### after building your project ))), `CMD + B`, and magic is here )
+###### now you can access in code all your properties of plist file 
 ### like:
 ### `titleLabel.text =  globalSettings.fonts.mainScreenSettings.title;`
