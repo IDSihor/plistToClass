@@ -1,5 +1,5 @@
 # plistToClass
-## Simply makes class from `.plist` file (app settings for example) in build time, in xXode IDE!
+## Simply makes class from `.plist` file (app settings for example) in build time, in xCode IDE!
 
 1. Purpose
 ###### We always use `.plist` files in our projects, but anyway, we should use hardcoded keys to work with corresponding values in project. 
