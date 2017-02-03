@@ -25,7 +25,7 @@
 @property (nonatomic, strong) NSString *propertyName;
 
 -(NSString*) propertyValuesInterface;
--(id) initWithValue:(id) value propertyName:(NSString*) propertyName withParentObject:(id) parent;
+-(id) initWithValue:(id) value propertyName:(NSString*) propertyName withParentObject:(BaseClass*) parent plist:(NSString*) plist;
 
 @property (nonatomic, strong) NSDictionary *types;
 @property (nonatomic, strong) id value;
@@ -35,5 +35,6 @@
 @property (nonnull, strong) NSString *plistName;
 
 @property (nonatomic, strong) NSString *implementation;
+@property (nonatomic, strong) NSString *plistOriginalName;
 
 @end

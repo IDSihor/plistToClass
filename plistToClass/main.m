@@ -13,12 +13,16 @@
 int main(int argc, const char * argv[]) {// 1st parameter - plist file, 2nd parameter - class file to fill propeeries
     @autoreleasepool {
         NSString *nameOfPlist = [NSString stringWithUTF8String:argv[1]];
-        NSDictionary *mainDictionary = [NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"test" ofType:@"plist"]];
-        PlistObject *plist = [[PlistObject alloc] initWithValue:mainDictionary propertyName:nameOfPlist withParentObject:nil];
+        
+        NSLog(@"name - %@", nameOfPlist);
+        NSDictionary *mainDictionary = [NSDictionary dictionaryWithContentsOfFile:[NSString stringWithFormat:@"%@.plist", nameOfPlist]];
+        NSLog(@"name - %@", mainDictionary);
+        
+        //NSDictionary *mainDictionary = [NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"test" ofType:@"plist"]];
+        PlistObject *plist = [[PlistObject alloc] initWithValue:mainDictionary propertyName:nameOfPlist withParentObject:nil plist:nameOfPlist];
         
         LogRed(@"%@", plist.fullInterface);
         LogGreen(@"%@", plist.fullImplementation);
-        plist.plistName = nameOfPlist;
 
         NSString *path2 = [NSString stringWithFormat:@"%@.h", [NSString stringWithUTF8String:argv[2]] ] ;
         NSString *path3 = [NSString stringWithFormat:@"%@.m", [NSString stringWithUTF8String:argv[2]] ] ;

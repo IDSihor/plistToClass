@@ -23,9 +23,10 @@
     return self;
 }
 
--(id) initWithValue:(id) value propertyName:(NSString*) propertyName withParentObject:(BaseClass*) parent {
+-(id) initWithValue:(id) value propertyName:(NSString*) propertyName withParentObject:(BaseClass*) parent plist:(NSString*) plist {
     self = [super init];
     if (self) {
+        self.plistOriginalName = plist;
         self.value = value;
         self.propertyName = propertyName;
         self.path = parent ? [NSString stringWithFormat:@"%@.%@",(parent).path, propertyName] : @"Main";

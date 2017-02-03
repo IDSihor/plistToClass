@@ -22,8 +22,8 @@
 
 @implementation PlistObject
 
--(id) initWithValue:(NSDictionary*) value propertyName:(NSString*) propertyName withParentObject:(id) parent {
-    self = [super initWithValue:value propertyName:propertyName withParentObject:parent ];
+-(id) initWithValue:(NSDictionary*) value propertyName:(NSString*) propertyName withParentObject:(id) parent plist:(NSString*) plist {
+    self = [super initWithValue:value propertyName:propertyName withParentObject:parent plist:plist ];
     if (self) {
         self.className = [NSString stringWithFormat:@"%@_class", propertyName];
         self.properties = [NSMutableArray new];
@@ -37,21 +37,22 @@
 -(void) parseDictionary:(NSDictionary*) dictionary forKey:(NSString*) keys {
     NSMutableDictionary *object = [NSMutableDictionary new];
     [dictionary enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
+        NSLog(@"%@", self.plistOriginalName);
         if (isObjectOfClass(obj, NSArray)) {
-            Array *array = [[Array alloc] initWithValue:obj propertyName:key withParentObject:self];
+            Array *array = [[Array alloc] initWithValue:obj propertyName:key withParentObject:self plist:self.plistOriginalName];
             [self.properties addObject:array];
         } else if (isObjectOfClass(obj, NSDictionary)) {
-            PlistObject *newClass = [[PlistObject alloc] initWithValue:obj propertyName:key withParentObject:self];
+            PlistObject *newClass = [[PlistObject alloc] initWithValue:obj propertyName:key withParentObject:self plist:self.plistOriginalName];
             [self.properties addObject:newClass];
         } else {
             if (isObjectOfClass(obj, NSDate)) {
-                Date *value = [[Date alloc] initWithValue:obj propertyName:key withParentObject:self];
+                Date *value = [[Date alloc] initWithValue:obj propertyName:key withParentObject:self plist:self.plistOriginalName];
                 [self.properties addObject:value];
             } else if (isObjectOfClass(obj, NSNumber)){
-                Number *value = [[Number alloc] initWithValue:obj propertyName:key withParentObject:self];
+                Number *value = [[Number alloc] initWithValue:obj propertyName:key withParentObject:self plist:self.plistOriginalName];
                 [self.properties addObject:value];
             } else {
-                String *value = [[String alloc] initWithValue:obj propertyName:key withParentObject:self];
+                String *value = [[String alloc] initWithValue:obj propertyName:key withParentObject:self plist:self.plistOriginalName];
                 [self.properties addObject:value];
             }
         }
@@ -89,7 +90,7 @@
     [self.properties enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL * _Nonnull stop) {
         if (!isObjectOfClass(obj, PlistObject)) {
             NSString *newPath = [((BaseClass*)obj).path substringFromIndex:5];
-            NSString *getter = [NSString stringWithFormat:@"-(%@*) %@ {\n  NSDictionary *plist = [NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@\"%@\" ofType:@\"plist\"]];\n  return [plist valueForKeyPath: @\"%@\"];\n}\n", ((BaseClass*)obj).className, ((BaseClass*)obj).propertyName, self.plistName, newPath];
+            NSString *getter = [NSString stringWithFormat:@"-(%@*) %@ {\n  NSDictionary *plist = [NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@\"%@\" ofType:@\"plist\"]];\n  return [plist valueForKeyPath: @\"%@\"];\n}\n", ((BaseClass*)obj).className, ((BaseClass*)obj).propertyName, self.plistOriginalName, newPath];
             [array addObject:getter];        }
         
     }];

@@ -10,8 +10,8 @@
 
 @implementation Number
 
--(id) initWithValue:(NSNumber*) value propertyName:(NSString*) propertyName withParentObject:(id) parent {
-    self = [super initWithValue:value propertyName:propertyName withParentObject:parent ];
+-(id) initWithValue:(NSNumber*) value propertyName:(NSString*) propertyName withParentObject:(id) parent plist:(NSString *)plist{
+    self = [super initWithValue:value propertyName:propertyName withParentObject:parent plist:plist ];
     if (self) {
         self.className = @"NSNumber";
     }

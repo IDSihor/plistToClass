@@ -9,7 +9,12 @@
 	<key>Date</key>
 	<data></data>
 	<key>Dict1</key>
-	<dict/>
+	<dict>
+		<key>vcxvcx</key>
+		<string></string>
+		<key>vcxvc</key>
+		<string></string>
+	</dict>
 	<key>array1</key>
 	<array>
 		<string>1</string>
